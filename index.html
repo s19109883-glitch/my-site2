@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СИЛА В ЕДИНСТВE | АНО "Сила в единстве" (Ребята Z Воронеж)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        
+        .tail-container {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(to bottom, #ffffff 0%, #0039a6 50%, #d00000 100%);
+        }
+        
+        .section-bg {
+            background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: rgb(255 255 255);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .photo-card {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .photo-card:hover {
+            transform: scale(1.05) rotate(1deg);
+        }
+        
+        .hero-title {
+            font-family: 'Playfair Display', sans-serif;
+        }
+        
+        @media (max-width: 640px) {
+            .hero-title { font-size: 3.2rem !important; line-height: 1.05 !important; }
+        }
+    </style>
+</head>
+<body class="tail-container bg-zinc-950 text-white overflow-x-hidden">
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-lg border-b border-white/20">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <span class="font-bold text-3xl tracking-tighter hero-title text-black">СИЛА В ЕДИНСТВE</span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                <a href="#about" class="nav-link text-black hover:text-red-600">О группе</a>
+                <a href="#actions" class="nav-link text-black hover:text-red-600">Акции и сборы</a>
+                <a href="#contacts" class="nav-link text-black hover:text-red-600">Контакты</a>
+            </div>
+            
+            <button id="mobile-menu-btn"
+                    class="md:hidden text-3xl text-black hover:text-red-600">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- MOBILE MENU -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-white/20 py-6">
+            <div class="flex flex-col px-6 gap-y-6 text-lg font-medium">
+                <a href="#about" class="hover:text-red-600">О группе</a>
+                <a href="#actions" class="hover:text-red-600">Акции и сборы</a>
+                <a href="#contacts" class="hover:text-red-600">Контакты</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header id="about" class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-x-2 bg-white/10 text-black text-xs font-bold tracking-[2px] px-6 py-3 rounded-3xl border border-white/30">
+                    <div class="w-2 h-2 bg-black rounded-full animate-pulse"></div>
+                    АНО "СИЛА В ЕДИНСТВE"
+                </div>
+                
+                <h1 class="hero-title text-7xl md:text-8xl leading-none font-bold tracking-tighter text-black">
+                    СИЛА<br>В<br><span class="text-black">ЕДИНСТВE</span>
+                </h1>
+                
+                <p class="text-2xl text-black/90 max-w-lg">
+                    Ребята Z Воронеж
+                </p>
+                
+                <div class="pt-6">
+                    <div onclick="document.getElementById('actions').scrollIntoView({ behavior: 'smooth' })" 
+                         class="cursor-pointer inline-flex items-center gap-x-4 group">
+                        <span class="text-black font-medium text-lg">Смотреть акции и сборы</span>
+                        <div class="w-12 h-12 border border-black rounded-2xl flex items-center justify-center group-hover:rotate-45 transition-transform">
+                            <i class="fa-solid fa-arrow-down text-black text-3xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <div class="absolute -inset-4 bg-gradient-to-br from-white/10 via-transparent to-transparent rounded-[4rem] -rotate-6"></div>
+                <img src="photo_5310270442515931925_x.jpg" 
+                     alt="Ребята Z Воронеж" 
+                     class="relative rounded-3xl shadow-2xl border-8 border-white/20 w-full object-cover aspect-[4/5]">
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-y-2 text-xs tracking-widest">
+            <span class="text-white/70">ПРОКРУТИТЕ ДЛЯ БОЛЬШЕГО</span>
+            <div class="w-px h-12 bg-gradient-to-b from-transparent via-black to-transparent"></div>
+        </div>
+    </header>
+
+    <!-- ABOUT SECTION - БЕЖЕВЫЙ -->
+    <section id="about" class="py-24" style="background-color: #e8dcc4;">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-16">
+                <div class="md:col-span-5">
+                    <div class="sticky top-24">
+                        <h2 class="text-6xl font-bold tracking-tighter mb-6 text-black hero-title">О группе</h2>
+                        <div class="h-1 w-20 bg-black"></div>
+                    </div>
+                </div>
+                <div class="md:col-span-7 space-y-10 text-lg leading-relaxed text-black">
+                    <p>
+                      АНО «Сила в единстве» — это волонтёрская организация, которая оказывает комплексную помощь военнослужащим Российской армии.Организация была созданна в апреле 2022 г.
+					  Военные действия постоянно требуют новых ресурсов.
+					  От влажных салфеток до автомобилей, дронов, подавителей БПЛА, которые мы закупаем с вашей помощью и лично передаем ИЗ РУК В РУКИ бойцам на передовой!
+
+                    </p>
+                    <p>
+                        
+                      Есть огромные запросы от ребят! Помощь, оказанная во время, помогает сберечь жизни и здоровье ребят.
+					  И самое главное, получая эту помощь, бойцы в окопах чувствуют нашу с вами поддержку, видят, что за их спинами - РОССИЯ!
+                      А так же, в нашей организации мы занимаемся плетением маскировочных сетей и изготовлением окопных свечей.
+					  Проводим благотворительные ярмарки. 
+					  На вырученые средства закрываем заявки Наших Защитникеов! 
+                    </p>
+                    <p>
+                        <strong>Вместе мы сильнее. Вместе мы непобедимы.</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACTIONS SECTION - БЕЖЕВЫЙ -->
+    <section id="actions" class="py-24" style="background-color: #e8dcc4;">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="uppercase text-black text-sm font-bold tracking-widest">АКЦИИ И СБОРЫ</span>
+                <h2 class="hero-title text-6xl font-bold tracking-tighter mt-4">Помогаем сейчас</h2>
+            </div>
+            
+            <!-- ACTION 1 - СБОРЫ -->
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+                <div>
+                    <div class="flex items-center gap-x-4 mb-6">
+                        <i class="fa-solid fa-gifts text-4xl text-black"></i>
+                        <h3 class="text-4xl font-semibold">Сборы на помощь солдатам</h3>
+                    </div>
+                    <div class="space-y-6 text-black">
+                        <p class="text-lg">
+                            Ежемесячно в рамках акции «Сила в единстве» мы собираем и отправляем:
+                        </p>
+                        <ul class="grid grid-cols-2 gap-4 text-sm">
+                            <li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-green-600"></i> Теплое обмундирование и бельё</li>
+                            <li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-green-600"></i> Батарейки, фонарики, генераторы</li>
+                            <li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-green-600"></i> Медицинские средства и аптечки</li>
+                            <li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-green-600"></i> Тёплые носки и перчатки</li>
+							<li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-green-600"></i> Маскировочне сети</li>
+							<li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-green-600"></i> Окопные свечи</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl p-8 shadow-inner">
+                    <div class="bg-white rounded-2xl p-8 text-center">
+                        <p class="uppercase text-xs tracking-widest mb-2 text-black">Счёт для перевода</p>
+                        <p class="text-3xl font-mono font-bold text-black mb-1">(СБЕР)2202 2023 0434 4546
+						(Т-БАНК)2200 7013 3509 0384</p>
+                        <p class="text-black/70 text-sm"> АННА ВЛАДИМИРОВНА К.</p>
+                        <p class="mt-6 text-sm text-black/50">ПОДПИСАТЬ ПЕРЕВОД: Благотворительность</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ACTION 2 - ЯРМАРКА (3 фото) -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="bg-white rounded-3xl p-8 shadow-inner">
+                    <div class="bg-white rounded-2xl p-8 text-center">
+                        <p class="uppercase text-xs tracking-widest mb-2 text-black">ГДЕ ПРОХОДИТ ЯРМАРКА</p>
+                        <p class="text-4xl font-mono font-bold text-black mb-1">Галерея Чижова, 4 этаж, 
+						каждую субботу с 12.00 до 19.00</p>
+                        <p class="text-black/70 text-sm">ЖДЕМ ВАС</p>
+                       
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-semibold mb-6 text-black">Ярмарка помощи</h3>
+                    <p class="text-lg text-black">
+                        Приходите на нашу благотворительную ярмарку — здесь всё необходимое для поддержки солдат, 
+                        а мы рассказываем о наших проектах. Каждая покупка — это реальная помощь.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10 BIG PHOTO FRAMES - НИЖЕ КОНТАКТОВ -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="hero-title text-6xl font-bold tracking-tighter text-black">Галерея</h2>
+                <p class="text-black/70 mt-4">Наши недавние акции и помощь</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Фото 1 -->
+                <div onclick="window.open('photo_5255764442786506745_w.jpg')" 
+                     class="photo-card cursor-pointer group relative overflow-hidden rounded-3xl aspect-[4/3]">
+                    <img src="photo_5255764442786506745_w.jpg" 
+                         alt="Ярмарка" 
+                         class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                    <div class="absolute bottom-6 left-6 text-black text-xs uppercase tracking-widest bg-white/90 px-4 py-1 rounded-full">
+                        Ярмарка
+                    </div>
+                </div>
+                
+                <!-- Фото 2 -->
+                <div onclick="window.open('photo_5255864893481623925_w.jpg')" 
+                     class="photo-card cursor-pointer group relative overflow-hidden rounded-3xl aspect-[4/3]">
+                    <img src="photo_5255864893481623925_w.jpg" 
+                         alt="На передовой" 
+                         class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                    <div class="absolute bottom-6 left-6 text-black text-xs uppercase tracking-widest bg-white/90 px-4 py-1 rounded-full">
+                        Ярмарка
+                    </div>
+                </div>
+                
+                <!-- Фото 3 -->
+                <div onclick="window.open('плетение сетей 3.jpg')" 
+                     class="photo-card cursor-pointer group relative overflow-hidden rounded-3xl aspect-[4/3]">
+                    <img src="плетение сетей 3.jpg" 
+                         alt="Плетение сетей" 
+                         class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                    <div class="absolute bottom-6 left-6 text-black text-xs uppercase tracking-widest bg-white/90 px-4 py-1 rounded-full">
+                        Плетение сетей
+                    </div>
+                </div>
+                
+                <!-- Фото 4 -->
+                <div onclick="window.open('photo_5321422939276567055_y.jpg')" 
+                     class="photo-card cursor-pointer group relative overflow-hidden rounded-3xl aspect-[4/3]">
+                    <img src="photo_5321422939276567055_y.jpg" 
+                         alt="Окопные свечи" 
+                         class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                    <div class="absolute bottom-6 left-6 text-black text-xs uppercase tracking-widest bg-white/90 px-4 py-1 rounded-full">
+                        Окопные свечи
+                    </div>
+                </div>
+                   <!-- Фото 1 -->
+                <div onclick="window.open('рулоны спанбонда.jpg')" 
+                     class="photo-card cursor-pointer group relative overflow-hidden rounded-3xl aspect-[4/3]">
+                    <img src="рулоны спанбонда.jpg" 
+                         alt="Спанбонд" 
+                         class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                    <div class="absolute bottom-6 left-6 text-black text-xs uppercase tracking-widest bg-white/90 px-4 py-1 rounded-full">
+                        Спанбонд
+                    </div>
+                </div>
+                
+                <!-- Фото 2 -->
+                <div onclick="window.open('photo_5391298857431859450_y.jpg')" 
+                     class="photo-card cursor-pointer group relative overflow-hidden rounded-3xl aspect-[4/3]">
+                    <img src="photo_5391298857431859450_y.jpg" 
+                         alt="Утепляем ребят" 
+                         class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                    <div class="absolute bottom-6 left-6 text-black text-xs uppercase tracking-widest bg-white/90 px-4 py-1 rounded-full">
+                        Утепляем ребят
+                    </div>
+                </div>
+                
+                <!-- Фото 3 -->
+                <div onclick="window.open('блец и сети.jpg')" 
+                     class="photo-card cursor-pointer group relative overflow-hidden rounded-3xl aspect-[4/3]">
+                    <img src="блец и сети.jpg"
+                         alt="Отгрузка ребятам"
+                         class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                    <div class="absolute bottom-6 left-6 text-black text-xs uppercase tracking-widest bg-white/90 px-4 py-1 rounded-full">
+                        Отгрузка ребятам
+                    </div>
+                </div>
+                
+                <!-- Фото 4 -->
+                <div onclick="window.open('photo_5280824292763443704_w.jpg')" 
+                     class="photo-card cursor-pointer group relative overflow-hidden rounded-3xl aspect-[4/3]">
+                    <img src="photo_5280824292763443704_w.jpg" 
+                         alt="Вкусняшки солдатам" 
+                         class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                    <div class="absolute bottom-6 left-6 text-black text-xs uppercase tracking-widest bg-white/90 px-4 py-1 rounded-full">
+                        Вкусняшки солдатам
+                    </div>
+                </div>
+    </section>
+    <!-- CONTACTS - БЕЖЕВЫЙ (только поле для MAX) -->
+    <section id="contacts" class="py-24" style="background-color: #e8dcc4;">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="hero-title text-6xl font-bold tracking-tighter mb-8 text-black">Контакты</h2>
+                    <div class="space-y-8">
+                        <div>
+                            <p class="text-black">Воронеж, Россия</p>
+                        </div>
+                        <div class="flex items-center gap-x-6">
+                            <div class="text-4xl">
+                                <i class="fa-solid fa-phone text-black"></i>
+                            </div>
+                            <div>
+                                <a href="tel:+79204312227" class="text-2xl font-medium hover:text-red-600">+7 (920) 431-22-27  <span class="font-medium text-black">Анна Владимировна</span></a>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="https://vk.ru/rebyatamz" target="_blank" 
+                               class="inline-flex items-center gap-x-4 text-xl">
+                                <i class="fa-brands fa-vk text-4xl"></i>
+                                <span class="font-medium text-black">Ссылка на ВК</span>
+                            </a>
+                        </div>
+						 <div>
+                            <a href="https://max.ru/join/e0N9teWS9PJb9gJC_8-yzZ7BD2lTYVd1G-P8tsjqFFI" target="_blank" 
+                               class="inline-flex items-center gap-x-4 text-xl">
+                                <i class="fa-brands fa-max text-4xl"></i>
+                                <span class="font-medium text-black">Ссылка на MAX</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-3xl p-10 shadow-inner">
+                    <form id="contact-form" class="space-y-8">
+                        <p class="text-3xl font-mono font-bold text-black mb-1">ГДЕ ЕЩЕ МОЖНО О НАС УЗНАТЬ:</p>
+                         <div>
+                            <li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-green-600"></i><a href="https://golnk.ru/RQWwk" target="_blank" 
+                               class="inline-flex items-center gap-x-4 text-xl">
+                                <i class="fa-brands fa-vk text-4xl"></i>
+                                <span class="font-medium text-black">Ссылка на ТВ-ГУБЕРНИЯ</span>
+                            </a>
+                        </div>
+                         <div class="bg-white rounded-3xl p-10 shadow-inner">
+                  
+                         <div>
+                            <li class="flex items-center gap-x-3"><i class="fa-solid fa-check text-green-600"></i><a href="https://clck.su/link-max" target="_blank" 
+                               class="inline-flex items-center gap-x-4 text-xl">
+                                <i class="fa-brands fa-vk text-4xl"></i>
+                                <span class="font-medium text-black">Ссылка Блокнот.ру</span>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-white/50 text-sm">
+            © 2026 АНО «Сила в единстве» (Ребята Z Воронеж) • Все права защищены
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape" && !mobileMenu.classList.contains('hidden')) mobileMenu.classList.add('hidden');
+        });
+        
+        // Добавление фото в галерею
+        function addPhoto() {
+            const input = document.getElementById('photo-input');
+            if (!input.files.length) {
+                alert('Выберите фото!');
+                return;
+            }
+            
+            const file = input.files[0];
+            const gallery = document.getElementById('gallery');
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const newCard = document.createElement('div');
+                newCard.className = 'photo-card cursor-pointer group relative overflow-hidden rounded-3xl aspect-[4/3]';
+                newCard.innerHTML = `
+                    <img src="${e.target.result}" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110" alt="Добавленное фото">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all"></div>
+                    <div class="absolute bottom-6 left-6 text-black text-xs uppercase tracking-widest bg-white/90 px-4 py-1 rounded-full">
+                        Новое
+                    </div>
+                `;
+                
+                const container = gallery.querySelector('.grid');
+                container.appendChild(newCard);
+                
+                input.value = '';
+            };
+            
+            reader.readAsDataURL(file);
+        }
+        
+        console.log('%c✅ Готово! 2 рамки Акций теперь содержат по 3 фото каждая. Белое окошко и звонок полностью убраны. Только поле для MAX и рамки для JPG. Всё на месте.', 'color: #eab308; font-size: 14px; font-weight: bold');
+    </script>
+</body>
+</html>
